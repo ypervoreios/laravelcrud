@@ -6,7 +6,10 @@
         @foreach ($users as $user)
             <li>
                 <x-card href="{{ Route('users.show', $user->id) }}" :highlight="$user['grade'] > 70">
-                    <h3>{{ $user->name}}</h3>
+                    <div class="card-body">
+                        <h3>{{$user->name}}</h3>
+                        <p>{{$user->school->name}}
+                    </div>
                 </x-card>
             </li>
         @endforeach

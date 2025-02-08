@@ -11,5 +11,8 @@ class People extends Model
 
     /** @use HasFactory<\Database\Factories\PeopleFactory> */
     use HasFactory;
-}
 
+    public function school(){
+        return $this->belongsTo(School::class);
+    }
+}
